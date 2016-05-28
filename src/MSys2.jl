@@ -23,7 +23,7 @@ function update()
   run(msys`pacman -Sy`)
 end
 function upgrade()
-  run(msys`pacman -Syuu`)
+  run(msys`pacman -Syuu --noconfirm`)
 end
 function search_call(package :: AbstractString)
 
