@@ -11,6 +11,7 @@ end
 function *(::Type{msys}, cmd :: Cmd)
   msys(cmd)
 end
+
 function Base.spawn(cmd::msys, stdios::Base.StdIOSet, exitcb::Callback, closecb::Callback; chain::Nullable{ProcessChain}=Nullable{ProcessChain}())
   first_part = `$bash_dir\\bash --login -c`
   c = Cmd(ByteString[first_part.exec; join(cmd.cmd.exec, " ")])
