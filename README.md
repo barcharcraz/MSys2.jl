@@ -8,6 +8,6 @@ the Mingw64 provider.
 
 Also of note is a type that acts somewhat like a nonstandard
 string literal for commands, and runs the command using an msys2
-bash shell. So writing `run(msys`ls`)` will run the ls command
+bash shell. So writing `run(msys``ls``)` will run the ls command
 using bash.
 [![Build Status](https://travis-ci.org/barcharcraz/MSys2.jl.svg?branch=master)](https://travis-ci.org/barcharcraz/MSys2.jl)
