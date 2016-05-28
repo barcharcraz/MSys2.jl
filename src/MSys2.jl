@@ -23,8 +23,6 @@ function update()
   run(msys`pacman -Sy`)
 end
 function upgrade()
-  update()
-  run(msys`pacman --needed --noconfirm -S bash pacman pacman-mirrors msys2-runtime`)
   run(msys`pacman -Syuu`)
 end
 function search_call(package :: AbstractString)

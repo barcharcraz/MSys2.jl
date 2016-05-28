@@ -9,6 +9,5 @@ download(joinpath("http://repo.msys2.org/distrib", arch_name),
 (name, ext, ext2) = BinDeps.splittarpath(arch_name)
 run(unpack_cmd(joinpath(downloadsdir, arch_name), depsdir, ext, ext2))
 cmdpath = joinpath(depsdir, "msys64", "usr", "bin", "bash.exe")
-ENV["MSYSTEM"] = "MSYS"
-run(`$cmdpath --login -c exit`)
-pop!(ENV, "MSYSTEM")
+using MSys2
+MSys2.upgrade()
